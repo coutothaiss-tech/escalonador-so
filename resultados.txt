@@ -1,0 +1,120 @@
+
+==================================================
+CENÁRIO 1: Processos curtos
+Processos (nome, CPU, prioridade): [('P1', 3, 1), ('P2', 1, 1), ('P3', 2, 1)]
+
+--- FCFS ---
+Sequência: P1 de 0 a 3; P2 de 3 a 4; P3 de 4 a 6
+Processo  CPU   Turnaround  Espera  
+P1        3     3           0       
+P2        1     4           3       
+P3        2     6           4       
+Espera média: 2.33
+Turnaround médio: 4.33
+
+--- SJF ---
+Sequência: P2 de 0 a 1; P3 de 1 a 3; P1 de 3 a 6
+Processo  CPU   Turnaround  Espera  
+P1        3     6           3       
+P2        1     1           0       
+P3        2     3           1       
+Espera média: 1.33
+Turnaround médio: 3.33
+
+--- Prioridade ---
+Sequência: P1 de 0 a 3; P2 de 3 a 4; P3 de 4 a 6
+Processo  CPU   Turnaround  Espera  
+P1        3     3           0       
+P2        1     4           3       
+P3        2     6           4       
+Espera média: 2.33
+Turnaround médio: 4.33
+
+--- Round Robin (quantum 2) ---
+Sequência: P1 de 0 a 2; P2 de 2 a 3; P3 de 3 a 5; P1 de 5 a 6
+Processo  CPU   Turnaround  Espera  
+P1        3     6           3       
+P2        1     3           2       
+P3        2     5           3       
+Espera média: 2.67
+Turnaround médio: 4.67
+
+==================================================
+CENÁRIO 2: Curtos e longos
+Processos (nome, CPU, prioridade): [('P1', 8, 1), ('P2', 2, 1), ('P3', 1, 1)]
+
+--- FCFS ---
+Sequência: P1 de 0 a 8; P2 de 8 a 10; P3 de 10 a 11
+Processo  CPU   Turnaround  Espera  
+P1        8     8           0       
+P2        2     10          8       
+P3        1     11          10      
+Espera média: 6.00
+Turnaround médio: 9.67
+
+--- SJF ---
+Sequência: P3 de 0 a 1; P2 de 1 a 3; P1 de 3 a 11
+Processo  CPU   Turnaround  Espera  
+P1        8     11          3       
+P2        2     3           1       
+P3        1     1           0       
+Espera média: 1.33
+Turnaround médio: 5.00
+
+--- Prioridade ---
+Sequência: P1 de 0 a 8; P2 de 8 a 10; P3 de 10 a 11
+Processo  CPU   Turnaround  Espera  
+P1        8     8           0       
+P2        2     10          8       
+P3        1     11          10      
+Espera média: 6.00
+Turnaround médio: 9.67
+
+--- Round Robin (quantum 2) ---
+Sequência: P1 de 0 a 2; P2 de 2 a 4; P3 de 4 a 5; P1 de 5 a 7; P1 de 7 a 9; P1 de 9 a 11
+Processo  CPU   Turnaround  Espera  
+P1        8     11          3       
+P2        2     4           2       
+P3        1     5           4       
+Espera média: 3.00
+Turnaround médio: 6.67
+
+==================================================
+CENÁRIO 3: Prioridades diferentes
+Processos (nome, CPU, prioridade): [('P1', 4, 3), ('P2', 2, 1), ('P3', 3, 2)]
+
+--- FCFS ---
+Sequência: P1 de 0 a 4; P2 de 4 a 6; P3 de 6 a 9
+Processo  CPU   Turnaround  Espera  
+P1        4     4           0       
+P2        2     6           4       
+P3        3     9           6       
+Espera média: 3.33
+Turnaround médio: 6.33
+
+--- SJF ---
+Sequência: P2 de 0 a 2; P3 de 2 a 5; P1 de 5 a 9
+Processo  CPU   Turnaround  Espera  
+P1        4     9           5       
+P2        2     2           0       
+P3        3     5           2       
+Espera média: 2.33
+Turnaround médio: 5.33
+
+--- Prioridade ---
+Sequência: P2 de 0 a 2; P3 de 2 a 5; P1 de 5 a 9
+Processo  CPU   Turnaround  Espera  
+P1        4     9           5       
+P2        2     2           0       
+P3        3     5           2       
+Espera média: 2.33
+Turnaround médio: 5.33
+
+--- Round Robin (quantum 2) ---
+Sequência: P1 de 0 a 2; P2 de 2 a 4; P3 de 4 a 6; P1 de 6 a 8; P3 de 8 a 9
+Processo  CPU   Turnaround  Espera  
+P1        4     8           4       
+P2        2     4           2       
+P3        3     9           6       
+Espera média: 4.00
+Turnaround médio: 7.00
