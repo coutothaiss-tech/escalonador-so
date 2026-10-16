@@ -4,7 +4,7 @@ Trabalho 2 de Sistemas Operacionais (ADS) - Prof. Guibson Krause
 
 ## Integrantes
 
-- [Thaís Couto Henchen]
+-Thaís Couto Henchen
 
 ## Linguagem
 
